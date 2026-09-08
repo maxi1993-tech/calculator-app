@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as *;
+
+[data-theme="light"] {
+  --main-background: #{$gray-200};
+  --screen-background: #{$gray-100};
+  --keyboard-background: #{$gray-300};
+  --theme-background: #{$gray-300};
+  --color-text: #{$gray-900};
+  --toggle-background: #{$orange-700};
+  --numbers-key-background: #{$gray-200};
+  --numbers-key-shadow: #{$gray-orange-400};
+  --numbers-color-text: #{$gray-900};
+  --action-key-background: #{$blue-500};
+  --action-key-shadow:#{$blue-600};
+  --action-color-text: #{$white};
+  --equal-key-background: #{$orange-700};
+  --equal-key-shadow: #{$orange-800};
+  --equal-color-text: #{$white};
+  --numbers-active: #{$blue-400};
+  --toggle-active: #{$orange-400};
+  --action-active: #{$blue-400};
+  --equal-active: #{$orange-400};
+}
+
+[data-theme="dark"] {
+  --main-background: #{$navy-850};
+  --screen-background: #{$navy-950};
+  --keyboard-background: #{$navy-900};
+  --theme-background: #{$navy-900};
+  --color-text: #{$white};
+  --toggle-background: #{$red-600};
+  --numbers-key-background: #{$gray-200};
+  --numbers-key-shadow: #{$gray-orange-400};
+  --numbers-color-text: #{$navy-750};
+  --action-key-background: #{$navy-700};
+  --action-key-shadow: #{$navy-800};
+  --action-color-text: #{$white};
+  --equal-key-background: #{$red-600};
+  --equal-key-shadow: #{$red-800};
+  --equal-color-text: #{$white};
+  --numbers-active: #{$white};
+  --toggle-active: #{$red-400};
+  --action-active: #{$navy-400};
+  --equal-active: #{$red-400};
+}
+
+
+[data-theme="purple"] {
+  --main-background: #{$purple-950};
+  --screen-background: #{$purple-900};
+  --keyboard-background: #{$purple-900};
+  --theme-background: #{$purple-900};
+  --color-text: #{$yellow-300};
+  --toggle-background: #{$cyan-500};
+  --numbers-key-background: #{$purple-850};
+  --numbers-key-shadow: #{$purple-400};
+  --numbers-color-text: #{$yellow-300};
+  --action-key-background: #{$purple-800};
+  --action-key-shadow: #{$purple-750};
+  --action-color-text: #{$white};
+  --equal-key-background: #{$cyan-500};
+  --equal-key-shadow: #{$cyan-400};
+  --equal-color-text: #{$blue-950};
+  --numbers-active: #{$purple-700};
+  --toggle-active: #{$cyan-200};
+  --action-active: #{$purple-650};
+  --equal-active: #{$cyan-200};
+}

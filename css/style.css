@@ -6,4 +6,70 @@
   color: hsl(228, 45%, 44%);
 }
 
+[data-theme=light] {
+  --main-background: hsl(0, 0%, 90%);
+  --screen-background: hsl(0, 0%, 93%);
+  --keyboard-background: hsl(0, 5%, 81%);
+  --theme-background: hsl(0, 5%, 81%);
+  --color-text: hsl(60, 10%, 19%);
+  --toggle-background: hsl(25, 98%, 40%);
+  --numbers-key-background: hsl(0, 0%, 90%);
+  --numbers-key-shadow: hsl(28, 16%, 65%);
+  --numbers-color-text: hsl(60, 10%, 19%);
+  --action-key-background: hsl(185, 42%, 37%);
+  --action-key-shadow:hsl(185, 58%, 25%);
+  --action-color-text: hsl(0, 100%, 100%);
+  --equal-key-background: hsl(25, 98%, 40%);
+  --equal-key-shadow: hsl(25, 99%, 27%);
+  --equal-color-text: hsl(0, 100%, 100%);
+  --numbers-active: hsl(185, 40%, 56%);
+  --toggle-active: hsl(25, 100%, 61%);
+  --action-active: hsl(185, 40%, 56%);
+  --equal-active: hsl(25, 100%, 61%);
+}
+
+[data-theme=dark] {
+  --main-background: hsl(222, 26%, 31%);
+  --screen-background: hsl(224, 36%, 15%);
+  --keyboard-background: hsl(223, 31%, 20%);
+  --theme-background: hsl(223, 31%, 20%);
+  --color-text: hsl(0, 100%, 100%);
+  --toggle-background: hsl(6, 63%, 50%);
+  --numbers-key-background: hsl(0, 0%, 90%);
+  --numbers-key-shadow: hsl(28, 16%, 65%);
+  --numbers-color-text: hsl(221, 14%, 31%);
+  --action-key-background: hsl(225, 21%, 49%);
+  --action-key-shadow: hsl(224, 28%, 35%);
+  --action-color-text: hsl(0, 100%, 100%);
+  --equal-key-background: hsl(6, 63%, 50%);
+  --equal-key-shadow: hsl(6, 70%, 34%);
+  --equal-color-text: hsl(0, 100%, 100%);
+  --numbers-active: hsl(0, 100%, 100%);
+  --toggle-active: hsl(6, 93%, 67%);
+  --action-active: hsl(225, 51%, 76%);
+  --equal-active: hsl(6, 93%, 67%);
+}
+
+[data-theme=purple] {
+  --main-background: hsl(268, 75%, 9%);
+  --screen-background: hsl(268, 71%, 12%);
+  --keyboard-background: hsl(268, 71%, 12%);
+  --theme-background: hsl(268, 71%, 12%);
+  --color-text: hsl(52, 100%, 62%);
+  --toggle-background: hsl(176, 100%, 44%);
+  --numbers-key-background: hsl(268, 47%, 21%);
+  --numbers-key-shadow: hsl(285, 91%, 52%);
+  --numbers-color-text: hsl(52, 100%, 62%);
+  --action-key-background: hsl(281, 89%, 26%);
+  --action-key-shadow: hsl(290, 70%, 36%);
+  --action-color-text: hsl(0, 100%, 100%);
+  --equal-key-background: hsl(176, 100%, 44%);
+  --equal-key-shadow: hsl(177, 92%, 70%);
+  --equal-color-text: hsl(198, 20%, 13%);
+  --numbers-active: hsl(280, 56%, 44%);
+  --toggle-active: hsl(176, 100%, 79%);
+  --action-active: hsl(268, 54%, 44%);
+  --equal-active: hsl(176, 100%, 79%);
+}
+
 /*# sourceMappingURL=style.css.map */

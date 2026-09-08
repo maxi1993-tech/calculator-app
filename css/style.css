@@ -22,7 +22,7 @@
   --equal-key-background: hsl(25, 98%, 40%);
   --equal-key-shadow: hsl(25, 99%, 27%);
   --equal-color-text: hsl(0, 100%, 100%);
-  --numbers-active: hsl(185, 40%, 56%);
+  --numbers-active: hsl(0, 100%, 100%);
   --toggle-active: hsl(25, 100%, 61%);
   --action-active: hsl(185, 40%, 56%);
   --equal-active: hsl(25, 100%, 61%);
@@ -66,9 +66,9 @@
   --equal-key-background: hsl(176, 100%, 44%);
   --equal-key-shadow: hsl(177, 92%, 70%);
   --equal-color-text: hsl(198, 20%, 13%);
-  --numbers-active: hsl(280, 56%, 44%);
+  --numbers-active: hsl(268, 54%, 44%);
   --toggle-active: hsl(176, 100%, 79%);
-  --action-active: hsl(268, 54%, 44%);
+  --action-active: hsl(280, 56%, 44%);
   --equal-active: hsl(176, 100%, 79%);
 }
 

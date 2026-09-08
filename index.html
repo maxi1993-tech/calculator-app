@@ -23,20 +23,30 @@
 
       <h1 class="header__title">calc</h1>
 
-      <fieldset class="theme">
+      <div role="radiogroup" class="theme" aria-labelledby="theme-label">
 
-        <legend class="theme__label">theme</legend>
+        <span class="theme__label" id="theme-label">theme</span>
 
-        <input class="theme__button" type="radio" id="theme-light" name="theme" value="light" checked>
-        <label for="theme-light">1</label>
+        <div class="theme__container">
 
-        <input class="theme__button" type="radio" id="theme-dark" name="theme" value="dark">
-        <label for="theme-dark">2</label>
+          <div class="theme__box">
+            <input class="theme__button" type="radio" id="theme-light" name="theme" value="light" checked>
+            <label for="theme-light">1</label>
+          </div>
 
-        <input class="theme__button" type="radio" id="theme-purple" name="theme" value="purple">
-        <label for="theme-purple">3</label>
+          <div class="theme__box">
+            <input class="theme__button" type="radio" id="theme-dark" name="theme" value="dark">
+            <label for="theme-dark">2</label>
+          </div>
 
-      </fieldset>
+          <div class="theme__box">
+            <input class="theme__button" type="radio" id="theme-purple" name="theme" value="purple">
+            <label for="theme-purple">3</label>
+          </div>
+
+        </div>
+
+      </div>
 
     </header>
 

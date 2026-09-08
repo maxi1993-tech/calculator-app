@@ -64,12 +64,6 @@
   --equal-active: hsl(176, 100%, 79%);
 }
 
-body {
-  min-height: 100dvh;
-  background-color: var(--main-background);
-  color: var(--color-text);
-}
-
 *,
 *::before,
 *::after {
@@ -131,6 +125,12 @@ legend {
 }
 
 body {
+  min-height: 100dvh;
+  background-color: var(--main-background);
+  color: var(--color-text);
+}
+
+body {
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
 }
@@ -150,6 +150,11 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 0.6875rem;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
 
+  <header class="header">
 
-  
+    <h1 class="header__title">calc</h1>
+
+    <fieldset class="theme">
+
+      <legend class="theme__label">theme</legend>
+
+      <input class="theme__button" type="radio" id="theme-light" name="theme" value="theme-light" checked>
+      <label for="theme-light">1</label>
+
+      <input class="theme__button" type="radio" id="theme-dark" name="theme" value="theme-dark">
+      <label for="theme-dark">2</label>
+
+      <input class="theme__button" type="radio" id="theme-purple" name="theme" value="theme-purple">
+      <label for="theme-purple">3</label>
+
+    </fieldset>
+
+  </header>
+
+  <main class="calc">
+
+    <output class="calc__screen">0</output>
+
+    <div class="calc__buttons">
+
+      <template id="button-template">
+        <button class="calc__button" data-value="" data-action=""></button>
+      </template>
+
+    </div>
+  </main>
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Chapelle maxime</a>.
   </footer>
+
 </body>
+
 </html>

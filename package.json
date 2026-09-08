@@ -1,0 +1,25 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "Frontend Mentor calculator app challenge",
+  "main": "index.js",
+  "scripts": {
+  "dev": "sass --watch sass/main.scss css/style.css",
+  "build": "sass --no-source-map sass/main.scss css/style.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxi1993-tech/calculator-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maxi1993-tech/calculator-app/issues"
+  },
+  "homepage": "https://github.com/maxi1993-tech/calculator-app#readme",
+  "devDependencies": {
+    "sass": "^1.104.0"
+  }
+}

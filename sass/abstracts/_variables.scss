@@ -1,0 +1,61 @@
+// Breakpoints
+$mobile: 375px;
+$desktop: 1440px;
+
+// Theme 1
+$navy-850: hsl(222, 26%, 31%);
+$navy-900: hsl(223, 31%, 20%);
+$navy-950: hsl(224, 36%, 15%);
+$navy-700: hsl(225, 21%, 49%);
+$navy-800: hsl(224, 28%, 35%);
+$navy-750: hsl(221, 14%, 31%);
+$red-600: hsl(6, 63%, 50%);
+$red-800: hsl(6, 70%, 34%);
+
+// Theme 2
+$gray-300: hsl(0, 5%, 81%);
+$gray-100: hsl(0, 0%, 93%);
+$gray-900: hsl(60, 10%, 19%);
+$gray-orange-450: hsl(35, 11%, 61%);
+$blue-500: hsl(185, 42%, 37%);
+$blue-600: hsl(185, 58%, 25%);
+$orange-700: hsl(25, 98%, 40%);
+$orange-800: hsl(25, 99%, 27%);
+
+// Theme 3
+$purple-950: hsl(268, 75%, 9%);
+$purple-900: hsl(268, 71%, 12%);
+$purple-850: hsl(268, 47%, 21%);
+$purple-800: hsl(281, 89%, 26%);
+$purple-750: hsl(290, 70%, 36%);
+$purple-400: hsl(285, 91%, 52%);
+$cyan-500: hsl(176, 100%, 44%);
+$cyan-400: hsl(177, 92%, 70%);
+$yellow-300: hsl(52, 100%, 62%);
+$blue-950: hsl(198, 20%, 13%);
+
+// Shared
+$gray-200: hsl(0, 0%, 90%);
+$gray-orange-400: hsl(28, 16%, 65%);
+$white: hsl(0, 100%, 100%);
+
+// Typography
+$font-family: "League Spartan", sans-serif;
+$font-weight-bold: 700;
+$font-size-themes: 0.75rem;
+$font-size-title: 2rem;
+$font-size-numbers: 2rem;
+$font-size-touch: 1.25rem;
+$font-size-screen: 2.5rem;
+
+//Spacing
+$gap-body: 1.5rem;
+$padding-body: 2rem 1.5rem;
+$gap-keyboard: 1rem;
+$padding-keyboard: 1rem;
+
+//Radius
+$radius-base: 10px;
+$radius-theme: 13px;
+$radius-theme-choices: 50%;
+$radius-touch: 5px;

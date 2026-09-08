@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+
+.container {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-body;
+    padding: $padding-body;
+    margin: 0 auto;
+}

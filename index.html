@@ -17,39 +17,43 @@
 
 <body>
 
-  <header class="header">
+  <div class="container">
 
-    <h1 class="header__title">calc</h1>
+    <header class="header">
 
-    <fieldset class="theme">
+      <h1 class="header__title">calc</h1>
 
-      <legend class="theme__label">theme</legend>
+      <fieldset class="theme">
 
-      <input class="theme__button" type="radio" id="theme-light" name="theme" value="light" checked>
-      <label for="theme-light">1</label>
+        <legend class="theme__label">theme</legend>
 
-      <input class="theme__button" type="radio" id="theme-dark" name="theme" value="dark">
-      <label for="theme-dark">2</label>
+        <input class="theme__button" type="radio" id="theme-light" name="theme" value="light" checked>
+        <label for="theme-light">1</label>
 
-      <input class="theme__button" type="radio" id="theme-purple" name="theme" value="purple">
-      <label for="theme-purple">3</label>
+        <input class="theme__button" type="radio" id="theme-dark" name="theme" value="dark">
+        <label for="theme-dark">2</label>
 
-    </fieldset>
+        <input class="theme__button" type="radio" id="theme-purple" name="theme" value="purple">
+        <label for="theme-purple">3</label>
 
-  </header>
+      </fieldset>
 
-  <main class="calc">
+    </header>
 
-    <output class="calc__screen">0</output>
+    <main class="calc">
 
-    <div class="calc__keys">
+      <output class="calc__screen">0</output>
 
-      <template id="key-template">
-        <button class="calc__key"></button>
-      </template>
+      <div class="calc__keys">
 
-    </div>
-  </main>
+        <template id="key-template">
+          <button class="calc__key"></button>
+        </template>
+
+      </div>
+    </main>
+
+  </div>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

@@ -135,6 +135,15 @@ body {
   font-weight: 700;
 }
 
+.container {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+}
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;

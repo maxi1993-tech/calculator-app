@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.calc {
+
+    &__screen {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: var(--screen-background);
+        padding: 1.5rem;
+        border-radius: $radius-base;
+        min-width: 0;
+        width: 100%;
+    }
+
+    &__output {
+        display: block;
+        padding: 6px;
+        font-size: $font-size-screen;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-box: trim-both cap alphabetic;
+    }
+}

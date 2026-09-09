@@ -135,6 +135,26 @@ body {
   font-weight: 700;
 }
 
+.calc__screen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--screen-background);
+  padding: 1.5rem;
+  border-radius: 10px;
+  min-width: 0;
+  width: 100%;
+}
+.calc__output {
+  display: block;
+  padding: 6px;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-box: trim-both cap alphabetic;
+}
+
 .container {
   max-width: 375px;
   display: flex;

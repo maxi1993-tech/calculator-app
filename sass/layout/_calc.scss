@@ -1,6 +1,9 @@
 @use "../abstracts/variables" as *;
 
 .calc {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-body;
 
     &__screen {
         display: flex;

@@ -135,6 +135,11 @@ body {
   font-weight: 700;
 }
 
+.calc {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .calc__screen {
   display: flex;
   justify-content: flex-end;

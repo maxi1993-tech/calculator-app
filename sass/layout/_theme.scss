@@ -2,20 +2,14 @@
 
 .theme {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     gap: $gap-theme;
-    position: relative;
 
-    &:after {
-        position: absolute;
-        content: "";
-        width: 68px;
-        height: 26px;
-        bottom: 0;
-        right: 0;
-        z-index: -10;
-        border-radius: $radius-theme;
-        background-color: var(--theme-background);
+    &__label {
+        text-transform: uppercase;
+        float: left;
+        font-size: $font-size-themes;
+        letter-spacing: 1px;
     }
 
     &__button {
@@ -24,25 +18,34 @@
         height: 16px;
         background-color: transparent;
         border-radius: 50%;
+        cursor: pointer;
 
         &:checked {
-            background-color: hsl(25, 100%, 61%);
+            background-color: var(--toggle-background);
         }
-    }
-
-
-    &__label {
-        text-transform: uppercase;
     }
 
     &__container {
         display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
     }
 
-    &__box {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 9px;
+    &__numbers {
+        display: grid;
+        grid-template-columns: repeat(3, 20px);
+        place-items: center;
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 20px);
+        place-items: center;
+        background-color: var(--theme-background);
+        border-radius: $radius-theme;
+        height: 26px;
+        padding: 0 4px;
     }
 }

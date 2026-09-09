@@ -157,4 +157,44 @@ body {
   justify-content: space-between;
 }
 
+.theme {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  position: relative;
+}
+.theme:after {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 26px;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+  border-radius: 13px;
+  background-color: var(--theme-background);
+}
+.theme__button {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.theme__button:checked {
+  background-color: hsl(25, 100%, 61%);
+}
+.theme__label {
+  text-transform: uppercase;
+}
+.theme__container {
+  display: flex;
+}
+.theme__box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 9px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as *;
+
+.theme {
+    display: flex;
+    align-items: end;
+    gap: $gap-theme;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 68px;
+        height: 26px;
+        bottom: 0;
+        right: 0;
+        z-index: -10;
+        border-radius: $radius-theme;
+        background-color: var(--theme-background);
+    }
+
+    &__button {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        background-color: transparent;
+        border-radius: 50%;
+
+        &:checked {
+            background-color: hsl(25, 100%, 61%);
+        }
+    }
+
+
+    &__label {
+        text-transform: uppercase;
+    }
+
+    &__container {
+        display: flex;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 9px;
+    }
+}

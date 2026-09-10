@@ -93,4 +93,12 @@ function handleKey(value, action) {
         }
         screen.textContent = state.display;
     }
+
+    if (action === "operator") {
+
+        state.shouldResetScreen = true
+        state.firstNumber = state.display
+        state.operator = value
+    }
+    console.log(state.firstNumber, state.operator)
 }

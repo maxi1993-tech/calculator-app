@@ -152,12 +152,10 @@ body {
 }
 .calc__output {
   display: block;
-  padding: 6px;
   font-size: 2.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-box: trim-both cap alphabetic;
 }
 
 .container {
@@ -192,11 +190,34 @@ body {
   float: left;
   font-size: 0.75rem;
   letter-spacing: 1px;
+  padding-bottom: 5px;
+}
+.theme__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+.theme__numbers {
+  height: 13px;
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  place-items: center;
+}
+.theme__buttons {
+  width: 68px;
+  height: 26px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--theme-background);
+  border-radius: 13px;
 }
 .theme__button {
   appearance: none;
   width: 16px;
   height: 16px;
+  margin: 0;
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
@@ -206,27 +227,6 @@ body {
 }
 .theme__button:checked {
   background-color: var(--toggle-background);
-}
-.theme__container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-}
-.theme__numbers {
-  display: grid;
-  grid-template-columns: repeat(3, 20px);
-  place-items: center;
-}
-.theme__buttons {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 20px);
-  place-items: center;
-  background-color: var(--theme-background);
-  border-radius: 13px;
-  height: 26px;
-  padding: 0 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

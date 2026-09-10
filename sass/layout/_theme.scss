@@ -10,12 +10,38 @@
         float: left;
         font-size: $font-size-themes;
         letter-spacing: 1px;
+        padding-bottom: 5px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: $gap-theme-container;
+        align-items: center;
+    }
+
+    &__numbers {
+        height: 13px;
+        display: grid;
+        grid-template-columns: repeat(3, 20px);
+        place-items: center;
+    }
+
+    &__buttons {
+        width: 68px;
+        height: 26px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--theme-background);
+        border-radius: $radius-theme;
     }
 
     &__button {
         appearance: none;
         width: 16px;
         height: 16px;
+        margin: 0;
         background-color: transparent;
         border-radius: 50%;
         cursor: pointer;
@@ -29,27 +55,4 @@
         }
     }
 
-    &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-    }
-
-    &__numbers {
-        display: grid;
-        grid-template-columns: repeat(3, 20px);
-        place-items: center;
-    }
-
-    &__buttons {
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns: repeat(3, 20px);
-        place-items: center;
-        background-color: var(--theme-background);
-        border-radius: $radius-theme;
-        height: 26px;
-        padding: 0 4px;
-    }
 }

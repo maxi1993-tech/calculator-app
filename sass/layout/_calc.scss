@@ -18,11 +18,9 @@
 
     &__output {
         display: block;
-        padding: 6px;
         font-size: $font-size-screen;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        text-box: trim-both cap alphabetic;
     }
 }

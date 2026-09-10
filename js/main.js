@@ -58,7 +58,39 @@ function listenKeys() {
         if (key === null) return
 
         const { value, action } = key.dataset
+        handleKey(value, action)
     })
 }
 
 listenKeys()
+
+const initialState = {
+    display: "0",
+    firstNumber: null,
+    operator: null,
+    shouldResetScreen: true,
+};
+
+const state = { ...initialState }
+
+function handleKey(value, action) {
+    console.log(value, action)
+
+    const screen = document.querySelector(".calc__output")
+
+    if (action === "reset") {
+        Object.assign(state, initialState)
+        screen.textContent = state.display;
+    }
+
+    if (action === "digit") {
+
+        if (state.shouldResetScreen === true) {
+            state.shouldResetScreen = false
+            state.display = value
+        } else {
+            state.display = state.display + value;
+        }
+        screen.textContent = state.display;
+    }
+}

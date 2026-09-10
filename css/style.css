@@ -135,6 +135,27 @@ body {
   font-weight: 700;
 }
 
+.calc__key {
+  height: 64px;
+  background-color: var(--numbers-key-background);
+  font-size: 2rem;
+  color: var(--numbers-text-color);
+  border-radius: 5px;
+  box-shadow: inset 0 -4px 0 var(--numbers-key-shadow);
+}
+.calc__key[data-action=delete], .calc__key[data-action=reset] {
+  background-color: var(--action-key-background);
+  color: var(--action-text-color);
+  box-shadow: inset 0 -4px 0 var(--action-key-shadow);
+  font-size: 1.25rem;
+}
+.calc__key[data-action=equals] {
+  background-color: var(--equal-key-background);
+  color: var(--equal-text-color);
+  box-shadow: inset 0 -4px 0 var(--equal-key-shadow);
+  font-size: 1.25rem;
+}
+
 .calc {
   display: flex;
   flex-direction: column;

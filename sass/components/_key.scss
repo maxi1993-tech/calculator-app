@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+
+.calc {
+    &__key {
+        height: 64px;
+        background-color: var(--numbers-key-background);
+        font-size: $font-size-numbers;
+        color: var(--numbers-text-color);
+        border-radius: $radius-key;
+        box-shadow: $shadow-key var(--numbers-key-shadow);
+
+        &[data-action="delete"],
+        &[data-action="reset"] {
+            background-color: var(--action-key-background);
+            color: var(--action-text-color);
+            box-shadow: $shadow-key var(--action-key-shadow);
+            font-size: $font-size-key;
+        }
+
+        &[data-action="equals"] {
+            background-color: var(--equal-key-background);
+            color: var(--equal-text-color);
+            box-shadow: $shadow-key var(--equal-key-shadow);
+            font-size: $font-size-key;
+        }
+    }
+}

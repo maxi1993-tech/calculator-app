@@ -3,7 +3,7 @@
 [data-theme="light"] {
   --main-background: #{$gray-200};
   --screen-background: #{$gray-100};
-  --keyboard-background: #{$gray-300};
+  --keys-background: #{$gray-300};
   --theme-background: #{$gray-300};
   --text-color: #{$gray-900};
   --toggle-background: #{$orange-700};
@@ -25,7 +25,7 @@
 [data-theme="dark"] {
   --main-background: #{$navy-850};
   --screen-background: #{$navy-950};
-  --keyboard-background: #{$navy-900};
+  --keys-background: #{$navy-900};
   --theme-background: #{$navy-900};
   --text-color: #{$white};
   --toggle-background: #{$red-600};
@@ -48,7 +48,7 @@
 [data-theme="purple"] {
   --main-background: #{$purple-950};
   --screen-background: #{$purple-900};
-  --keyboard-background: #{$purple-900};
+  --keys-background: #{$purple-900};
   --theme-background: #{$purple-900};
   --text-color: #{$yellow-300};
   --toggle-background: #{$cyan-500};

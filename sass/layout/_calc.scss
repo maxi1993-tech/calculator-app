@@ -23,4 +23,10 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
+
+    &__keys {
+        padding: $padding-keys;
+        background-color: var(--keys-background);
+        border-radius: $radius-base;
+    }
 }

@@ -24,5 +24,10 @@
             box-shadow: $shadow-key var(--equal-key-shadow);
             font-size: $font-size-key;
         }
+
+        &[data-action="reset"],
+        &[data-action="equals"] {
+            grid-column: span 2;
+        }
     }
 }

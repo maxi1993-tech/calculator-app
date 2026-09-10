@@ -25,6 +25,9 @@
     }
 
     &__keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $gap-keys;
         padding: $padding-keys;
         background-color: var(--keys-background);
         border-radius: $radius-base;

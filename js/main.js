@@ -28,7 +28,6 @@ function createKeys(keys) {
     calcKeys.replaceChildren()
 
     for (const { value, action, label } of keys) {
-        console.log(value, action, label)
 
         const keyClone = keyTemplate.content.cloneNode(true)
         const cloneButton = keyClone.querySelector("button")
@@ -44,7 +43,22 @@ function createKeys(keys) {
     }
 
     calcKeys.appendChild(fragment)
-    console.log(keys)
 }
 
 createKeys(calculatorKeys)
+
+function listenKeys() {
+
+    const keys = document.querySelector(".calc__keys")
+
+    keys.addEventListener("click", (event) => {
+
+        const key = event.target.closest("button")
+
+        if (key === null) return
+
+        const { value, action } = key.dataset
+    })
+}
+
+listenKeys()

@@ -17,6 +17,24 @@ export function createCalculator(screen) {
         screen.textContent = state.display
     }
 
+    function handleDigit(value) {
+
+        console.log(state.shouldResetScreen)
+
+        if (state.shouldResetScreen === true) {
+
+            state.shouldResetScreen = false
+            state.display = value
+
+        } else {
+
+            state.display = state.display + value
+        }
+
+        screen.textContent = state.display
+    }
+
+
     function handleKey(value, action) {
 
         console.log(value, action)
@@ -27,22 +45,9 @@ export function createCalculator(screen) {
             handleReset()
         }
 
-
         if (action === "digit") {
 
-            console.log(state.shouldResetScreen)
-
-            if (state.shouldResetScreen === true) {
-
-                state.shouldResetScreen = false
-                state.display = value
-
-            } else {
-
-                state.display = state.display + value
-            }
-
-            screen.textContent = state.display
+            handleDigit(value)
         }
 
 

@@ -72,6 +72,8 @@ export function createCalculator(screen) {
             console.log("APRÈS =", { ...state })
         }
 
+        if (state.operator === null) return
+
         const result = calculate(
             Number(state.firstNumber),
             state.operator,

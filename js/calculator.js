@@ -99,6 +99,21 @@ export function createCalculator(screen) {
         updateScreen()
     }
 
+    function handleDecimal(value) {
+
+        if (state.shouldResetScreen === true) {
+
+            state.display = "0"
+            state.shouldResetScreen = false
+        }
+
+        if (state.display.includes(".") === false) {
+
+            state.display = state.display + value
+            updateScreen()
+        }
+    }
+
     function handleKey(value, action) {
 
         console.log(value, action)
@@ -125,6 +140,11 @@ export function createCalculator(screen) {
         if (action === "equals") {
 
             handleEquals()
+        }
+
+        if (action === "decimal") {
+
+            handleDecimal(value)
         }
     }
 

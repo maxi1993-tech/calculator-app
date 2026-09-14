@@ -78,6 +78,13 @@ export function createCalculator(screen) {
             Number(state.secondNumber)
         )
 
+        if (!Number.isFinite(result)) {
+            state.display = "Attention"
+            state.shouldResetScreen = true
+            updateScreen()
+            return
+        }
+
         state.firstNumber = String(result)
         state.display = String(result)
         state.lastOperator = "="

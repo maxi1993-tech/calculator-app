@@ -59,6 +59,7 @@ function listenKeys() {
 
         const { value, action } = key.dataset
         handleKey(value, action)
+        console.log(state)
     })
 }
 
@@ -67,6 +68,7 @@ listenKeys()
 const initialState = {
     display: "0",
     firstNumber: null,
+    secondNumber: null,
     operator: null,
     shouldResetScreen: true,
 };
@@ -80,7 +82,7 @@ function handleKey(value, action) {
 
     if (action === "reset") {
         Object.assign(state, initialState)
-        screen.textContent = state.display;
+        screen.textContent = state.display
     }
 
     if (action === "digit") {
@@ -89,9 +91,9 @@ function handleKey(value, action) {
             state.shouldResetScreen = false
             state.display = value
         } else {
-            state.display = state.display + value;
+            state.display = state.display + value
         }
-        screen.textContent = state.display;
+        screen.textContent = state.display
     }
 
     if (action === "operator") {
@@ -100,5 +102,41 @@ function handleKey(value, action) {
         state.firstNumber = state.display
         state.operator = value
     }
-    console.log(state.firstNumber, state.operator)
+
+    if (action === "equals") {
+
+        const { firstNumber, operator, display, secondNumber } = state
+
+        const result = calculate(Number(firstNumber), operator, Number(display))
+
+        console.log(firstNumber, operator, display, secondNumber)
+        console.log(state)
+
+
+
+        if (state.secondNumber === null) {
+            state.secondNumber = state.display
+        }
+        state.display = String(result)
+        console.log(firstNumber, operator, display, secondNumber)
+        state.firstNumber = String(result)
+        state.display = String(result)
+        screen.textContent = state.display
+
+    }
+}
+
+
+function calculate(first, operator, second) {
+
+    switch (operator) {
+        case "+":
+            return first + second
+        case "-":
+            return first - second
+        case "/":
+            return first / second
+        case "*":
+            return first * second
+    }
 }

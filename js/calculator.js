@@ -86,6 +86,19 @@ export function createCalculator(screen) {
         updateScreen()
     }
 
+    function handleDelete() {
+
+        const lastCharact = state.display.substring(0, state.display.length - 1)
+
+        state.display = lastCharact
+
+        if (state.display === "") {
+            state.display = "0"
+        }
+
+        updateScreen()
+    }
+
     function handleKey(value, action) {
 
         console.log(value, action)
@@ -93,6 +106,10 @@ export function createCalculator(screen) {
         if (action === "reset") {
 
             handleReset()
+        }
+
+        if (action === "delete") {
+            handleDelete()
         }
 
         if (action === "digit") {

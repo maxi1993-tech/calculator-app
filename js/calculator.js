@@ -31,6 +31,11 @@ export function createCalculator(screen) {
             state.shouldResetScreen = false
             state.display = value
 
+            if (state.lastOperator === "=") {
+
+                state.firstNumber = state.display
+            }
+
         } else {
 
             state.display = state.display + value
@@ -44,6 +49,7 @@ export function createCalculator(screen) {
         state.shouldResetScreen = true
         state.firstNumber = state.display
         state.operator = value
+        state.lastOperator = value
     }
 
     function handleEquals() {
@@ -59,29 +65,25 @@ export function createCalculator(screen) {
 
         console.log("AVANT =", { ...state })
 
-        if (state.shouldResetScreen === false) {
+        if (state.shouldResetScreen === false && state.lastOperator !== "=") {
 
             state.secondNumber = state.display
 
-            const result = calculate(
-                Number(state.firstNumber),
-                state.operator,
-                Number(state.secondNumber)
-            )
-
-            state.firstNumber = String(result)
-            state.display = String(result)
-            state.lastOperator = "="
-            state.shouldResetScreen = true
-
-            updateScreen()
-
             console.log("APRÈS =", { ...state })
-
-        } else if (state.shouldResetScreen === true && state.lastOperator === "=") {
-
-            // Deuxième "=" pas encore codé.
         }
+
+        const result = calculate(
+            Number(state.firstNumber),
+            state.operator,
+            Number(state.secondNumber)
+        )
+
+        state.firstNumber = String(result)
+        state.display = String(result)
+        state.lastOperator = "="
+        state.shouldResetScreen = true
+
+        updateScreen()
     }
 
     function handleKey(value, action) {

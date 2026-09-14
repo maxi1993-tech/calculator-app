@@ -59,7 +59,6 @@ export function createCalculator(screen) {
 
         console.log("AVANT =", { ...state })
 
-
         if (state.shouldResetScreen === false) {
 
             state.secondNumber = state.display
@@ -79,20 +78,15 @@ export function createCalculator(screen) {
 
             console.log("APRÈS =", { ...state })
 
-
-        } else if (
-            state.shouldResetScreen === true && state.lastOperator === "="
-        ) {
+        } else if (state.shouldResetScreen === true && state.lastOperator === "=") {
 
             // Deuxième "=" pas encore codé.
         }
     }
 
-
     function handleKey(value, action) {
 
         console.log(value, action)
-
 
         if (action === "reset") {
 
@@ -104,12 +98,10 @@ export function createCalculator(screen) {
             handleDigit(value)
         }
 
-
         if (action === "operator") {
 
             handleOperator(value)
         }
-
 
         if (action === "equals") {
 
@@ -117,10 +109,8 @@ export function createCalculator(screen) {
         }
     }
 
-
     return handleKey
 }
-
 
 export function listenKeys(handleKey) {
 
@@ -138,7 +128,6 @@ export function listenKeys(handleKey) {
     })
 }
 
-
 export function createKeys(keys) {
 
     const calcKeys = document.querySelector(".calc__keys")
@@ -146,7 +135,6 @@ export function createKeys(keys) {
     const fragment = document.createDocumentFragment()
 
     calcKeys.replaceChildren()
-
 
     for (const { value, action, label } of keys) {
 
@@ -163,10 +151,8 @@ export function createKeys(keys) {
         fragment.appendChild(keyClone)
     }
 
-
     calcKeys.appendChild(fragment)
 }
-
 
 function calculate(first, operator, second) {
 

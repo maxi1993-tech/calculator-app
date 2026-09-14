@@ -1,0 +1,164 @@
+export function createCalculator(screen) {
+
+    const initialState = {
+        display: "0",
+        firstNumber: null,
+        secondNumber: null,
+        operator: null,
+        lastOperator: null,
+        shouldResetScreen: true,
+    }
+
+    const state = { ...initialState }
+
+
+    function handleKey(value, action) {
+
+        console.log(value, action)
+
+
+        if (action === "reset") {
+
+            Object.assign(state, initialState)
+
+            screen.textContent = state.display
+        }
+
+
+        if (action === "digit") {
+
+            console.log(state.shouldResetScreen)
+
+            if (state.shouldResetScreen === true) {
+
+                state.shouldResetScreen = false
+                state.display = value
+
+            } else {
+
+                state.display = state.display + value
+            }
+
+            screen.textContent = state.display
+        }
+
+
+        if (action === "operator") {
+
+            state.shouldResetScreen = true
+            state.firstNumber = state.display
+            state.operator = value
+        }
+
+
+        if (action === "equals") {
+
+            const {
+                firstNumber,
+                operator,
+                display,
+                secondNumber,
+                lastOperator,
+                shouldResetScreen
+            } = state
+
+            console.log("AVANT =", { ...state })
+
+
+            if (state.shouldResetScreen === false) {
+
+                state.secondNumber = state.display
+
+                const result = calculate(
+                    Number(state.firstNumber),
+                    state.operator,
+                    Number(state.secondNumber)
+                )
+
+                state.firstNumber = String(result)
+                state.display = String(result)
+                state.lastOperator = "="
+                state.shouldResetScreen = true
+
+                screen.textContent = state.display
+
+                console.log("APRÈS =", { ...state })
+
+
+            } else if (
+                state.shouldResetScreen === true && state.lastOperator === "="
+            ) {
+
+                // Deuxième "=" pas encore codé.
+            }
+        }
+    }
+
+
+    return handleKey
+}
+
+
+export function listenKeys(handleKey) {
+
+    const keys = document.querySelector(".calc__keys")
+
+    keys.addEventListener("click", (event) => {
+
+        const key = event.target.closest("button")
+
+        if (key === null) return
+
+        const { value, action } = key.dataset
+
+        handleKey(value, action)
+    })
+}
+
+
+export function createKeys(keys) {
+
+    const calcKeys = document.querySelector(".calc__keys")
+    const keyTemplate = document.querySelector("#key-template")
+    const fragment = document.createDocumentFragment()
+
+    calcKeys.replaceChildren()
+
+
+    for (const { value, action, label } of keys) {
+
+        const keyClone = keyTemplate.content.cloneNode(true)
+        const cloneButton = keyClone.querySelector("button")
+
+        if (value) {
+            cloneButton.dataset.value = value
+        }
+
+        cloneButton.textContent = label || value
+        cloneButton.dataset.action = action
+
+        fragment.appendChild(keyClone)
+    }
+
+
+    calcKeys.appendChild(fragment)
+}
+
+
+function calculate(first, operator, second) {
+
+    switch (operator) {
+
+        case "+":
+            return first + second
+
+        case "-":
+            return first - second
+
+        case "/":
+            return first / second
+
+        case "*":
+            return first * second
+    }
+}

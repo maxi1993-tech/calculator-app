@@ -46,6 +46,48 @@ export function createCalculator(screen) {
         state.operator = value
     }
 
+    function handleEquals() {
+
+        const {
+            firstNumber,
+            operator,
+            display,
+            secondNumber,
+            lastOperator,
+            shouldResetScreen
+        } = state
+
+        console.log("AVANT =", { ...state })
+
+
+        if (state.shouldResetScreen === false) {
+
+            state.secondNumber = state.display
+
+            const result = calculate(
+                Number(state.firstNumber),
+                state.operator,
+                Number(state.secondNumber)
+            )
+
+            state.firstNumber = String(result)
+            state.display = String(result)
+            state.lastOperator = "="
+            state.shouldResetScreen = true
+
+            updateScreen()
+
+            console.log("APRÈS =", { ...state })
+
+
+        } else if (
+            state.shouldResetScreen === true && state.lastOperator === "="
+        ) {
+
+            // Deuxième "=" pas encore codé.
+        }
+    }
+
 
     function handleKey(value, action) {
 
@@ -71,44 +113,7 @@ export function createCalculator(screen) {
 
         if (action === "equals") {
 
-            const {
-                firstNumber,
-                operator,
-                display,
-                secondNumber,
-                lastOperator,
-                shouldResetScreen
-            } = state
-
-            console.log("AVANT =", { ...state })
-
-
-            if (state.shouldResetScreen === false) {
-
-                state.secondNumber = state.display
-
-                const result = calculate(
-                    Number(state.firstNumber),
-                    state.operator,
-                    Number(state.secondNumber)
-                )
-
-                state.firstNumber = String(result)
-                state.display = String(result)
-                state.lastOperator = "="
-                state.shouldResetScreen = true
-
-                updateScreen()
-
-                console.log("APRÈS =", { ...state })
-
-
-            } else if (
-                state.shouldResetScreen === true && state.lastOperator === "="
-            ) {
-
-                // Deuxième "=" pas encore codé.
-            }
+            handleEquals()
         }
     }
 

@@ -34,6 +34,13 @@ export function createCalculator(screen) {
         screen.textContent = state.display
     }
 
+    function handleOperator(value) {
+
+        state.shouldResetScreen = true
+        state.firstNumber = state.display
+        state.operator = value
+    }
+
 
     function handleKey(value, action) {
 
@@ -53,9 +60,7 @@ export function createCalculator(screen) {
 
         if (action === "operator") {
 
-            state.shouldResetScreen = true
-            state.firstNumber = state.display
-            state.operator = value
+            handleOperator(value)
         }
 
 

@@ -11,6 +11,11 @@ export function createCalculator(screen) {
 
     const state = { ...initialState }
 
+    function handleReset() {
+
+        Object.assign(state, initialState)
+        screen.textContent = state.display
+    }
 
     function handleKey(value, action) {
 
@@ -19,9 +24,7 @@ export function createCalculator(screen) {
 
         if (action === "reset") {
 
-            Object.assign(state, initialState)
-
-            screen.textContent = state.display
+            handleReset()
         }
 
 

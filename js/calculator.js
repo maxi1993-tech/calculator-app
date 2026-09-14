@@ -11,10 +11,15 @@ export function createCalculator(screen) {
 
     const state = { ...initialState }
 
+    function updateScreen() {
+
+        screen.textContent = state.display
+    }
+
     function handleReset() {
 
         Object.assign(state, initialState)
-        screen.textContent = state.display
+        updateScreen()
     }
 
     function handleDigit(value) {
@@ -31,7 +36,7 @@ export function createCalculator(screen) {
             state.display = state.display + value
         }
 
-        screen.textContent = state.display
+        updateScreen()
     }
 
     function handleOperator(value) {
@@ -93,7 +98,7 @@ export function createCalculator(screen) {
                 state.lastOperator = "="
                 state.shouldResetScreen = true
 
-                screen.textContent = state.display
+                updateScreen()
 
                 console.log("APRÈS =", { ...state })
 
